@@ -1,0 +1,9 @@
+{
+  "eventCreated": "2026-05-11T19:00:00Z",
+  "eventType": "LeadTagRemoved",
+  "resourceList": [345678],
+  "data": {
+    "claimed": true,
+    "tag": "HotLead"
+  }
+}

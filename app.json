@@ -1,0 +1,27 @@
+{
+  "name": "sierra-fub-tag-pusher",
+  "description": "Syncs tag additions from Sierra Interactive to Follow Up Boss",
+  "env": {
+    "SIERRA_API_KEY": {
+      "description": "Your Sierra Interactive API key. Stored in Secret Manager during deploy.",
+      "required": true
+    },
+    "FUB_API_KEY": {
+      "description": "Your Follow Up Boss API key. Stored in Secret Manager during deploy.",
+      "required": true
+    }
+  },
+  "options": {
+    "allow-unauthenticated": true,
+    "memory": "128Mi",
+    "cpu": "1",
+    "max-instances": 10
+  },
+  "hooks": {
+    "postcreate": {
+      "commands": [
+        "./deploy/postcreate.sh"
+      ]
+    }
+  }
+}

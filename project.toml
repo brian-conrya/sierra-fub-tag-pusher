@@ -1,0 +1,8 @@
+# Configures Google Cloud's Go buildpack to build the cmd/pusher binary.
+# Without this, the buildpack looks for a main package at the repo root and
+# fails. Used by Cloud Run Button, `gcloud run deploy --source .`, and any
+# other path that builds with CNCF buildpacks.
+
+[[build.env]]
+name = "GOOGLE_BUILDABLE"
+value = "./cmd/pusher"
